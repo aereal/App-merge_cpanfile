@@ -1,14 +1,22 @@
 # NAME
 
-App::merge\_cpanfile - It's new $module
+App::merge\_cpanfile - Merge multiple cpanfile into one
 
 # SYNOPSIS
 
-    use App::merge_cpanfile;
+    cat core.cpanfile
+    # requires 'Carp';
+    cat sub.cpanfile
+    # requires 'LWP::UserAgent';
+    merge-cpanfile core.cpanfile sub.cpanfile
+    # requires 'Carp';
+    # requires 'LWP::UserAgent';
 
 # DESCRIPTION
 
-App::merge\_cpanfile is ...
+App::merge\_cpanfile merges multiple cpanfile into one cpanfile.
+
+It's handy way to manage dependencies of private modules same as published CPAN modules'.
 
 # LICENSE
 

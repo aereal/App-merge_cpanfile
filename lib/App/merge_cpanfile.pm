@@ -51,15 +51,23 @@ __END__
 
 =head1 NAME
 
-App::merge_cpanfile - It's new $module
+App::merge_cpanfile - Merge multiple cpanfile into one
 
 =head1 SYNOPSIS
 
-    use App::merge_cpanfile;
+    cat core.cpanfile
+    # requires 'Carp';
+    cat sub.cpanfile
+    # requires 'LWP::UserAgent';
+    merge-cpanfile core.cpanfile sub.cpanfile
+    # requires 'Carp';
+    # requires 'LWP::UserAgent';
 
 =head1 DESCRIPTION
 
-App::merge_cpanfile is ...
+App::merge_cpanfile merges multiple cpanfile into one cpanfile.
+
+It's handy way to manage dependencies of private modules same as published CPAN modules'.
 
 =head1 LICENSE
 
